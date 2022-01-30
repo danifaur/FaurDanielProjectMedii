@@ -1,0 +1,49 @@
+@page
+@model FaurDanielProject.Pages.Clase.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Clasa</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Clasa.Nume)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Clasa.Nume)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Clasa.Nivel)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Clasa.Nivel.Nume)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Clasa.Intensitate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Clasa.Intensitate.Nume)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Clasa.Antrenor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Clasa.Antrenor.nume)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Clasa.DateTime)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Clasa.DateTime)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Clasa.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
